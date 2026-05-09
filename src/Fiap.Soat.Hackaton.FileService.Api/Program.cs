@@ -37,6 +37,8 @@ _ = builder.Services.AddScoped<IGetFileHandler, GetFileHandler>();
 _ = builder.Services.AddScoped<IListFilesHandler, ListFilesHandler>();
 _ = builder.Services.AddScoped<IDeleteFileHandler, DeleteFileHandler>();
 
+_ = builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection("RabbitMq"));
+
 // Add services to the container.
 _ = builder.Services.AddOpenApi();
 
