@@ -14,4 +14,9 @@
       <ProjectReference Include="..\Fiap.Spat.Hackaton.FileService.Domain\Fiap.Spat.Hackaton.FileService.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="UseCases\Delete\" />
+      <Folder Include="UseCases\List\" />
+    </ItemGroup>
+
 </Project>

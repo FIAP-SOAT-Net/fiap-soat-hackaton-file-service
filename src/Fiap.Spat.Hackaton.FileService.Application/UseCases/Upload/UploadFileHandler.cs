@@ -5,7 +5,7 @@ using Fiap.Spat.Hackaton.FileService.Domain.Entities;
 using Fiap.Spat.Hackaton.FileService.Domain.Shared;
 using Microsoft.Extensions.Logging;
 
-namespace Fiap.Spat.Hackaton.FileService.Application.UseCases;
+namespace Fiap.Spat.Hackaton.FileService.Application.UseCases.Upload;
 
 public sealed class UploadFileHandler(
     ILogger<UploadFileHandler> logger,

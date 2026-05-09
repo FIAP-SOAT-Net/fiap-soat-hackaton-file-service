@@ -11,7 +11,9 @@ using Fiap.Spat.Hackaton.FileService.Application.Adapters.Controllers.Interfaces
 using Fiap.Spat.Hackaton.FileService.Application.Adapters.Gateways.Repositories;
 using Fiap.Spat.Hackaton.FileService.Application.Adapters.Gateways.Services;
 using Fiap.Spat.Hackaton.FileService.Application.UseCases;
+using Fiap.Spat.Hackaton.FileService.Application.UseCases.Get;
 using Fiap.Spat.Hackaton.FileService.Application.UseCases.Interfaces;
+using Fiap.Spat.Hackaton.FileService.Application.UseCases.Upload;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +34,7 @@ _ = builder.Services.AddScoped<IFileRepository, FileRepository>();
 _ = builder.Services.AddScoped<IFileStorage, AwsS3Storage>();
 _ = builder.Services.AddScoped<IMessagePublisher, RabbitMqPublisher>();
 _ = builder.Services.AddScoped<IUploadFileHandler, UploadFileHandler>();
+_ = builder.Services.AddScoped<IGetFileHandler, GetFileHandler>();
 
 // Add services to the container.
 _ = builder.Services.AddOpenApi();

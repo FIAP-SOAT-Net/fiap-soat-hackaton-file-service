@@ -1,6 +1,7 @@
 using Fiap.Soat.Hackaton.FileService.Api.Services;
 using Fiap.Spat.Hackaton.FileService.Application.Adapters.Controllers.Interfaces;
 using Fiap.Spat.Hackaton.FileService.Application.Models;
+using Fiap.Spat.Hackaton.FileService.Application.UseCases.Get;
 
 namespace Fiap.Soat.Hackaton.FileService.Api.Endpoints;
 
@@ -22,11 +23,7 @@ public static class FileEndpoints
             .WithName("UploadFile")
             .WithDescription("Upload a PDF or image file");
 
-        app.MapGet("/files/{fileId}", async (string fileId, IFileService fileService, CancellationToken cancellationToken) =>
-            {
-                var file = await fileService.GetFileAsync(fileId, cancellationToken);
-                return file is null ? Results.NotFound() : Results.File(file.Content, file.ContentType, file.FileName);
-            })
+        app.MapGet("/files/{fileId}", (string fileId, IFileController controller, CancellationToken cancellationToken) => controller.GetAsync(new GetFileByIdQuery(fileId), cancellationToken))
             .WithName("GetFile")
             .WithDescription("Download a file by ID");
 

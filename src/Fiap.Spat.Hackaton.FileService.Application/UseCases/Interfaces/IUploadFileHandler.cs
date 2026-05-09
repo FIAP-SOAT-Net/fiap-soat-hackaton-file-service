@@ -1,3 +1,4 @@
+using Fiap.Spat.Hackaton.FileService.Application.UseCases.Upload;
 using Fiap.Spat.Hackaton.FileService.Domain.Shared;
 
 namespace Fiap.Spat.Hackaton.FileService.Application.UseCases.Interfaces;
