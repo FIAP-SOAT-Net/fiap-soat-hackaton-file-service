@@ -45,19 +45,6 @@ var mongoDatabase = mongoClient.GetDatabase(builder.Configuration["MongoDb:Datab
 _ = builder.Services.AddSingleton<IMongoClient>(mongoClient);
 _ = builder.Services.AddSingleton(mongoDatabase);
 
-// RabbitMQ Configuration
-string rabbitMqConnectionString = builder.Configuration.GetConnectionString("RabbitMQ")
-                                  ?? throw new InvalidOperationException("RabbitMQ connection string not configured");
-var rabbitMqFactory = new ConnectionFactory()
-{
-    Uri = new Uri(rabbitMqConnectionString), AutomaticRecoveryEnabled = true, NetworkRecoveryInterval = TimeSpan.FromSeconds(10)
-};
-_ = builder.Services.AddSingleton(rabbitMqFactory);
-_ = builder.Services.AddSingleton<IConnection>(sp =>
-{
-    var factory = sp.GetRequiredService<ConnectionFactory>();
-    return factory.CreateConnectionAsync().GetAwaiter().GetResult();
-});
 
 // Health Checks
 _ = builder.Services.AddHealthChecks();
