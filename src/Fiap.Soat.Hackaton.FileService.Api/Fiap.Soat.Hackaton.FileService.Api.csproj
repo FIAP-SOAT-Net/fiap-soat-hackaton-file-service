@@ -15,7 +15,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Fiap.Soat.Hackaton.FileService.Infrastructure\Fiap.Soat.Hackaton.FileService.Infrastructure.csproj" />
-      <ProjectReference Include="..\Fiap.Spat.Hackaton.FileService.Application\Fiap.Spat.Hackaton.FileService.Application.csproj" />
+      <ProjectReference Include="..\Fiap.Soat.Hackaton.FileService.Application\Fiap.Soat.Hackaton.FileService.Application.csproj" />
     </ItemGroup>
 
 </Project>

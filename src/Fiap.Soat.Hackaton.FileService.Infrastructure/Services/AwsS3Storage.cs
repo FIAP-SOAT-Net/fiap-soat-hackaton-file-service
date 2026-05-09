@@ -1,8 +1,8 @@
 using Amazon.S3;
-using Fiap.Spat.Hackaton.FileService.Application.Adapters.Gateways.Services;
-using Fiap.Spat.Hackaton.FileService.Application.Models;
-using Fiap.Spat.Hackaton.FileService.Domain.Entities;
-using Fiap.Spat.Hackaton.FileService.Domain.Shared;
+using Fiap.Soat.Hackaton.FileService.Application.Adapters.Gateways.Services;
+using Fiap.Soat.Hackaton.FileService.Application.Models;
+using Fiap.Soat.Hackaton.FileService.Domain.Entities;
+using Fiap.Soat.Hackaton.FileService.Domain.Shared;
 using Microsoft.Extensions.Configuration;
 
 namespace Fiap.Soat.Hackaton.FileService.Infrastructure.Services;

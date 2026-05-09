@@ -1,4 +1,4 @@
-using Fiap.Spat.Hackaton.FileService.Application.Adapters.Gateways.Services;
+using Fiap.Soat.Hackaton.FileService.Application.Adapters.Gateways.Services;
 
 namespace Fiap.Soat.Hackaton.FileService.Integration.Tests;
 

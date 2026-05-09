@@ -1,4 +1,4 @@
-using Fiap.Spat.Hackaton.FileService.Application.Adapters.Gateways.Services;
+using Fiap.Soat.Hackaton.FileService.Application.Adapters.Gateways.Services;
 using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
 using System.Text;

@@ -24,15 +24,11 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Using Include="Xunit"/>
-        <Using Include="FluentAssertions"/>
-        <Using Include="Moq"/>
+        <ProjectReference Include="..\..\src\Fiap.Soat.Hackaton.FileService.Domain\Fiap.Soat.Hackaton.FileService.Domain.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="../../src/Fiap.Soat.Hackaton.FileService.Api/Fiap.Soat.Hackaton.FileService.Api.csproj"/>
-        <ProjectReference Include="..\..\src\Fiap.Soat.Hackaton.FileService.Application\Fiap.Soat.Hackaton.FileService.Application.csproj" />
-        <ProjectReference Include="../../src/Fiap.Soat.Hackaton.FileService.Infrastructure/Fiap.Soat.Hackaton.FileService.Infrastructure.csproj"/>
+        <Using Include="Xunit"/>
     </ItemGroup>
 
 </Project>

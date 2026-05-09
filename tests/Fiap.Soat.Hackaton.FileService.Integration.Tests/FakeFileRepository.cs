@@ -1,5 +1,5 @@
-using Fiap.Spat.Hackaton.FileService.Application.Adapters.Gateways.Repositories;
-using Fiap.Spat.Hackaton.FileService.Domain.Entities;
+using Fiap.Soat.Hackaton.FileService.Application.Adapters.Gateways.Repositories;
+using Fiap.Soat.Hackaton.FileService.Domain.Entities;
 using System.Collections.Concurrent;
 namespace Fiap.Soat.Hackaton.FileService.Integration.Tests;
 

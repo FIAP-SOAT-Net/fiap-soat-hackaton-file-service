@@ -1,5 +1,5 @@
-using Fiap.Spat.Hackaton.FileService.Application.Adapters.Gateways.Repositories;
-using Fiap.Spat.Hackaton.FileService.Application.Adapters.Gateways.Services;
+using Fiap.Soat.Hackaton.FileService.Application.Adapters.Gateways.Repositories;
+using Fiap.Soat.Hackaton.FileService.Application.Adapters.Gateways.Services;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection.Extensions;

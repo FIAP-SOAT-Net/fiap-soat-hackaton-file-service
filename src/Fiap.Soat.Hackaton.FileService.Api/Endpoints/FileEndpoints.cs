@@ -1,8 +1,8 @@
-using Fiap.Spat.Hackaton.FileService.Application.Adapters.Controllers.Interfaces;
-using Fiap.Spat.Hackaton.FileService.Application.Models;
-using Fiap.Spat.Hackaton.FileService.Application.UseCases.Delete;
-using Fiap.Spat.Hackaton.FileService.Application.UseCases.Get;
-using Fiap.Spat.Hackaton.FileService.Application.UseCases.List;
+using Fiap.Soat.Hackaton.FileService.Application.Adapters.Controllers.Interfaces;
+using Fiap.Soat.Hackaton.FileService.Application.Models;
+using Fiap.Soat.Hackaton.FileService.Application.UseCases.Delete;
+using Fiap.Soat.Hackaton.FileService.Application.UseCases.Get;
+using Fiap.Soat.Hackaton.FileService.Application.UseCases.List;
 
 namespace Fiap.Soat.Hackaton.FileService.Api.Endpoints;
 

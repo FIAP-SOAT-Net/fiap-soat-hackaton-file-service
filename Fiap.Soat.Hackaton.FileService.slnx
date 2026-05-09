@@ -1,10 +1,10 @@
 <Solution>
   <Folder Name="/src/" />
   <Folder Name="/src/010 - Enterprise Business Rules/">
-    <Project Path="src/Fiap.Spat.Hackaton.FileService.Domain/Fiap.Spat.Hackaton.FileService.Domain.csproj" />
+    <Project Path="src\Fiap.Soat.Hackaton.FileService.Domain\Fiap.Soat.Hackaton.FileService.Domain.csproj" />
   </Folder>
   <Folder Name="/src/020 - Application Business Rules/">
-    <Project Path="src/Fiap.Spat.Hackaton.FileService.Application/Fiap.Spat.Hackaton.FileService.Application.csproj" />
+    <Project Path="src\Fiap.Soat.Hackaton.FileService.Application\Fiap.Soat.Hackaton.FileService.Application.csproj" />
   </Folder>
   <Folder Name="/src/030 - Frameworks &amp; Drivers/">
     <Project Path="src/Fiap.Soat.Hackaton.FileService.Api/Fiap.Soat.Hackaton.FileService.Api.csproj" />
@@ -14,7 +14,7 @@
     <Project Path="tests/Fiap.Soat.Hackaton.FileService.Api.Tests/Fiap.Soat.Hackaton.FileService.Api.Tests.csproj" />
     <Project Path="tests/Fiap.Soat.Hackaton.FileService.Infrastructure.Tests/Fiap.Soat.Hackaton.FileService.Infrastructure.Tests.csproj" />
     <Project Path="tests/Fiap.Soat.Hackaton.FileService.Integration.Tests/Fiap.Soat.Hackaton.FileService.Integration.Tests.csproj" />
-    <Project Path="tests/Fiap.Spat.Hackaton.FileService.Application.Tests/Fiap.Spat.Hackaton.FileService.Application.Tests.csproj" />
-    <Project Path="tests/Fiap.Spat.Hackaton.FileService.Domain.Tests/Fiap.Spat.Hackaton.FileService.Domain.Tests.csproj" />
+    <Project Path="tests\Fiap.Soat.Hackaton.FileService.Application.Tests\Fiap.Soat.Hackaton.FileService.Application.Tests.csproj" />
+    <Project Path="tests\Fiap.Soat.Hackaton.FileService.Domain.Tests\Fiap.Soat.Hackaton.FileService.Domain.Tests.csproj" />
   </Folder>
 </Solution>

@@ -13,8 +13,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Fiap.Spat.Hackaton.FileService.Application\Fiap.Spat.Hackaton.FileService.Application.csproj" />
-      <ProjectReference Include="..\Fiap.Spat.Hackaton.FileService.Domain\Fiap.Spat.Hackaton.FileService.Domain.csproj" />
+      <ProjectReference Include="..\Fiap.Soat.Hackaton.FileService.Application\Fiap.Soat.Hackaton.FileService.Application.csproj" />
+      <ProjectReference Include="..\Fiap.Soat.Hackaton.FileService.Domain\Fiap.Soat.Hackaton.FileService.Domain.csproj" />
     </ItemGroup>
 
     <ItemGroup>
