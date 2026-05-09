@@ -44,11 +44,8 @@ public sealed class UploadFileHandler(
             bucketName = fileStorageResponse.Data.BucketName,
             key =  fileStorageResponse.Data.Key,
         };
-        await messagePublisher.PublishAsync(
-            exchange: "fileservice.events",
-            routingKey: "file.uploaded",
-            message: fileUploadedEvent,
-            cancellationToken);
+        string routingKey = $"file.uploaded.{fileDocument.Id}";
+        await messagePublisher.PublishAsync(routingKey, message: fileUploadedEvent, cancellationToken);
         return ResponseFactory.Ok();
     }
 }
