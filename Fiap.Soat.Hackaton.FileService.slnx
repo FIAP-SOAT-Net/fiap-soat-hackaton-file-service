@@ -13,6 +13,7 @@
   <Folder Name="/tests/">
     <Project Path="tests/Fiap.Soat.Hackaton.FileService.Api.Tests/Fiap.Soat.Hackaton.FileService.Api.Tests.csproj" />
     <Project Path="tests/Fiap.Soat.Hackaton.FileService.Infrastructure.Tests/Fiap.Soat.Hackaton.FileService.Infrastructure.Tests.csproj" />
+    <Project Path="tests/Fiap.Soat.Hackaton.FileService.Integration.Tests/Fiap.Soat.Hackaton.FileService.Integration.Tests.csproj" />
     <Project Path="tests/Fiap.Spat.Hackaton.FileService.Application.Tests/Fiap.Spat.Hackaton.FileService.Application.Tests.csproj" />
     <Project Path="tests/Fiap.Spat.Hackaton.FileService.Domain.Tests/Fiap.Spat.Hackaton.FileService.Domain.Tests.csproj" />
   </Folder>
