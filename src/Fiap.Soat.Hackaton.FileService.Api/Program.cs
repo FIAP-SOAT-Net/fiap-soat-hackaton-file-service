@@ -2,17 +2,16 @@ using Amazon.Runtime;
 using Amazon.S3;
 using Fiap.Soat.Hackaton.FileService.Api.Endpoints;
 using MongoDB.Driver;
-using RabbitMQ.Client;
-using Fiap.Soat.Hackaton.FileService.Api.Services;
 using Fiap.Soat.Hackaton.FileService.Infrastructure.Repositories;
 using Fiap.Soat.Hackaton.FileService.Infrastructure.Services;
 using Fiap.Spat.Hackaton.FileService.Application.Adapters.Controllers;
 using Fiap.Spat.Hackaton.FileService.Application.Adapters.Controllers.Interfaces;
 using Fiap.Spat.Hackaton.FileService.Application.Adapters.Gateways.Repositories;
 using Fiap.Spat.Hackaton.FileService.Application.Adapters.Gateways.Services;
-using Fiap.Spat.Hackaton.FileService.Application.UseCases;
+using Fiap.Spat.Hackaton.FileService.Application.UseCases.Delete;
 using Fiap.Spat.Hackaton.FileService.Application.UseCases.Get;
 using Fiap.Spat.Hackaton.FileService.Application.UseCases.Interfaces;
+using Fiap.Spat.Hackaton.FileService.Application.UseCases.List;
 using Fiap.Spat.Hackaton.FileService.Application.UseCases.Upload;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -35,6 +34,8 @@ _ = builder.Services.AddScoped<IFileStorage, AwsS3Storage>();
 _ = builder.Services.AddScoped<IMessagePublisher, RabbitMqPublisher>();
 _ = builder.Services.AddScoped<IUploadFileHandler, UploadFileHandler>();
 _ = builder.Services.AddScoped<IGetFileHandler, GetFileHandler>();
+_ = builder.Services.AddScoped<IListFilesHandler, ListFilesHandler>();
+_ = builder.Services.AddScoped<IDeleteFileHandler, DeleteFileHandler>();
 
 // Add services to the container.
 _ = builder.Services.AddOpenApi();
@@ -51,9 +52,6 @@ _ = builder.Services.AddSingleton(mongoDatabase);
 
 // Health Checks
 _ = builder.Services.AddHealthChecks();
-
-// Register Application Services
-_ = builder.Services.AddScoped<IFileService, FileService>();
 
 var app = builder.Build();
 

@@ -1,7 +1,8 @@
-using Fiap.Soat.Hackaton.FileService.Api.Services;
 using Fiap.Spat.Hackaton.FileService.Application.Adapters.Controllers.Interfaces;
 using Fiap.Spat.Hackaton.FileService.Application.Models;
+using Fiap.Spat.Hackaton.FileService.Application.UseCases.Delete;
 using Fiap.Spat.Hackaton.FileService.Application.UseCases.Get;
+using Fiap.Spat.Hackaton.FileService.Application.UseCases.List;
 
 namespace Fiap.Soat.Hackaton.FileService.Api.Endpoints;
 
@@ -27,27 +28,11 @@ public static class FileEndpoints
             .WithName("GetFile")
             .WithDescription("Download a file by ID");
 
-        app.MapGet("/files", async (IFileService fileService, CancellationToken cancellationToken) =>
-            {
-                var files = await fileService.GetAllFilesAsync(cancellationToken);
-
-                return Results.Ok(files.Select(f => new
-                {
-                    f.Id,
-                    f.FileName,
-                    f.ContentType,
-                    f.Size,
-                    f.UploadedAt
-                }));
-            })
+        app.MapGet("/files", (IFileController controller, CancellationToken cancellationToken) => controller.ListAsync(new GetFilesQuery(), cancellationToken))
             .WithName("ListFiles")
             .WithDescription("List all uploaded files");
 
-        app.MapDelete("/files/{fileId}", async (string fileId, IFileService fileService, CancellationToken cancellationToken) =>
-            {
-                bool deleted = await fileService.DeleteFileAsync(fileId, cancellationToken);
-                return !deleted ? Results.NotFound() : Results.NoContent();
-            })
+        app.MapDelete("/files/{fileId}", (string fileId, IFileController controller, CancellationToken cancellationToken) => controller.DeleteAsync(new DeleteFileCommand(fileId), cancellationToken))
             .WithName("DeleteFile")
             .WithDescription("Delete a file by ID");
     }
