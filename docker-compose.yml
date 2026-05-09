@@ -1,0 +1,84 @@
+version: '3.8'
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:latest
+    container_name: fiap-mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password123
+      MONGO_INITDB_DATABASE: fileservice
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+      - mongodb_config:/data/configdb
+    networks:
+      - fiap-network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # RabbitMQ Message Broker
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    container_name: fiap-rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    ports:
+      - "5672:5672"    # AMQP port
+      - "15672:15672"  # Management UI
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - fiap-network
+    healthcheck:
+      test: rabbitmq-diagnostics ping
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # .NET API
+  api:
+    build:
+      context: .
+      dockerfile: src/Fiap.Soat.Hackaton.FileService.Api/Dockerfile
+    container_name: fiap-file-service-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      # MongoDB Configuration
+      MONGODB_HOST: mongodb
+      MONGODB_PORT: 27017
+      MONGODB_USER: root
+      MONGODB_PASSWORD: password123
+      MONGODB_DATABASE: fileservice
+      # RabbitMQ Configuration
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+      RABBITMQ_USER: guest
+      RABBITMQ_PASSWORD: guest
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - fiap-network
+    restart: unless-stopped
+
+volumes:
+  mongodb_data:
+  mongodb_config:
+  rabbitmq_data:
+
+networks:
+  fiap-network:
+    driver: bridge

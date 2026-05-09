@@ -1,3 +1,14 @@
 <Solution>
-  <Project Path="src/Fiap.Soat.Hackaton.FileService.Api/Fiap.Soat.Hackaton.FileService.Api.csproj" />
+  <Folder Name="/src/" />
+  <Folder Name="/src/010 - Enterprise Business Rules/">
+    <Project Path="src/Fiap.Spat.Hackaton.FileService.Domain/Fiap.Spat.Hackaton.FileService.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/020 - Application Business Rules/">
+    <Project Path="src/Fiap.Spat.Hackaton.FileService.Application/Fiap.Spat.Hackaton.FileService.Application.csproj" />
+  </Folder>
+  <Folder Name="/src/030 - Frameworks &amp; Drivers/">
+    <Project Path="src/Fiap.Soat.Hackaton.FileService.Api/Fiap.Soat.Hackaton.FileService.Api.csproj" />
+    <Project Path="src/Fiap.Soat.Hackaton.FileService.Infrastructure/Fiap.Soat.Hackaton.FileService.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
 </Solution>

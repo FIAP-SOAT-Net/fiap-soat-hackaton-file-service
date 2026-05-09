@@ -4,10 +4,19 @@
         <TargetFramework>net10.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>a46fc7a8-8978-4160-9e07-1fe792182e57</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.2"/>
+        <PackageReference Include="AWSSDK.S3" Version="4.0.23" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.7" />
+        <PackageReference Include="MongoDB.Driver" Version="3.8.0" />
+        <PackageReference Include="RabbitMQ.Client" Version="7.2.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Fiap.Soat.Hackaton.FileService.Infrastructure\Fiap.Soat.Hackaton.FileService.Infrastructure.csproj" />
+      <ProjectReference Include="..\Fiap.Spat.Hackaton.FileService.Application\Fiap.Spat.Hackaton.FileService.Application.csproj" />
     </ItemGroup>
 
 </Project>
