@@ -1,9 +1,9 @@
-using FluentAssertions;
 using Fiap.Spat.Hackaton.FileService.Application.Models;
 using Fiap.Spat.Hackaton.FileService.Application.UseCases.Delete;
 using Fiap.Spat.Hackaton.FileService.Application.UseCases.Get;
 using Fiap.Spat.Hackaton.FileService.Application.UseCases.List;
 using Fiap.Spat.Hackaton.FileService.Application.UseCases.Upload;
+using FluentAssertions;
 
 namespace Fiap.Spat.Hackaton.FileService.Application.Tests.Models;
 

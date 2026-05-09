@@ -1,9 +1,9 @@
-using FluentAssertions;
 using Fiap.Spat.Hackaton.FileService.Application.Adapters.Gateways.Repositories;
 using Fiap.Spat.Hackaton.FileService.Application.Adapters.Gateways.Services;
 using Fiap.Spat.Hackaton.FileService.Application.Models;
 using Fiap.Spat.Hackaton.FileService.Application.UseCases.Upload;
 using Fiap.Spat.Hackaton.FileService.Domain.Shared;
+using FluentAssertions;
 using Microsoft.Extensions.Logging;
 using Moq;
 

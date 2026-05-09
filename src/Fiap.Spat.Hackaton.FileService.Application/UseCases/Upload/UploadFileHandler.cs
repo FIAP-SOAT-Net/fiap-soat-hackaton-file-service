@@ -42,7 +42,7 @@ public sealed class UploadFileHandler(
             size = fileDocument.Size,
             timestamp = DateTime.UtcNow,
             bucketName = fileStorageResponse.Data.BucketName,
-            key =  fileStorageResponse.Data.Key,
+            key = fileStorageResponse.Data.Key,
         };
         string routingKey = $"file.uploaded.{fileDocument.Id}";
         await messagePublisher.PublishAsync(routingKey, message: fileUploadedEvent, cancellationToken);

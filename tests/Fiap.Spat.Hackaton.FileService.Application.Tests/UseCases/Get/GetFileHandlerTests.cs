@@ -1,7 +1,7 @@
-using FluentAssertions;
 using Fiap.Spat.Hackaton.FileService.Application.Adapters.Gateways.Repositories;
 using Fiap.Spat.Hackaton.FileService.Application.UseCases.Get;
 using Fiap.Spat.Hackaton.FileService.Domain.Entities;
+using FluentAssertions;
 using Moq;
 
 namespace Fiap.Spat.Hackaton.FileService.Application.Tests.UseCases.Get;
@@ -36,7 +36,7 @@ public class GetFileHandlerTests
         var repositoryMock = new Mock<IFileRepository>();
         repositoryMock
             .Setup(x => x.GetAsync("missing", It.IsAny<CancellationToken>()))
-            .ReturnsAsync((FileDocument?)null);
+            .ReturnsAsync((FileDocument?) null);
 
         var handler = new GetFileHandler(repositoryMock.Object);
         var query = new GetFileByIdQuery("missing");

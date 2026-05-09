@@ -1,7 +1,7 @@
-using FluentAssertions;
 using Fiap.Spat.Hackaton.FileService.Application.Adapters.Gateways.Repositories;
 using Fiap.Spat.Hackaton.FileService.Application.UseCases.List;
 using Fiap.Spat.Hackaton.FileService.Domain.Entities;
+using FluentAssertions;
 using Moq;
 
 namespace Fiap.Spat.Hackaton.FileService.Application.Tests.UseCases.List;

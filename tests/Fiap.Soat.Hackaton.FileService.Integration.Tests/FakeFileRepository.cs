@@ -1,6 +1,6 @@
-using System.Collections.Concurrent;
 using Fiap.Spat.Hackaton.FileService.Application.Adapters.Gateways.Repositories;
 using Fiap.Spat.Hackaton.FileService.Domain.Entities;
+using System.Collections.Concurrent;
 namespace Fiap.Soat.Hackaton.FileService.Integration.Tests;
 
 public sealed class FakeFileRepository : IFileRepository

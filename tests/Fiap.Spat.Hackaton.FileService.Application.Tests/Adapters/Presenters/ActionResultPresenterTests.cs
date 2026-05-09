@@ -1,6 +1,6 @@
-using FluentAssertions;
 using Fiap.Spat.Hackaton.FileService.Application.Adapters.Presenters;
 using Fiap.Spat.Hackaton.FileService.Domain.Shared;
+using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -19,7 +19,7 @@ public class ActionResultPresenterTests
 
         // Assert
         var objectResult = actionResult.Should().BeOfType<ObjectResult>().Subject;
-        objectResult.StatusCode.Should().Be((int)HttpStatusCode.BadRequest);
+        objectResult.StatusCode.Should().Be((int) HttpStatusCode.BadRequest);
         objectResult.Value.Should().Be(response);
     }
 
@@ -34,7 +34,7 @@ public class ActionResultPresenterTests
 
         // Assert
         var objectResult = actionResult.Should().BeOfType<ObjectResult>().Subject;
-        objectResult.StatusCode.Should().Be((int)HttpStatusCode.Accepted);
+        objectResult.StatusCode.Should().Be((int) HttpStatusCode.Accepted);
         objectResult.Value.Should().Be(response);
     }
 }

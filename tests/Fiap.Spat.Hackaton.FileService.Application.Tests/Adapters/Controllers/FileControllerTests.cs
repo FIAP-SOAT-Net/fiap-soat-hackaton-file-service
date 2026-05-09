@@ -1,4 +1,3 @@
-using FluentAssertions;
 using Fiap.Spat.Hackaton.FileService.Application.Adapters.Controllers;
 using Fiap.Spat.Hackaton.FileService.Application.Models;
 using Fiap.Spat.Hackaton.FileService.Application.UseCases.Delete;
@@ -8,6 +7,7 @@ using Fiap.Spat.Hackaton.FileService.Application.UseCases.List;
 using Fiap.Spat.Hackaton.FileService.Application.UseCases.Upload;
 using Fiap.Spat.Hackaton.FileService.Domain.Entities;
 using Fiap.Spat.Hackaton.FileService.Domain.Shared;
+using FluentAssertions;
 using Microsoft.AspNetCore.Http;
 using Moq;
 

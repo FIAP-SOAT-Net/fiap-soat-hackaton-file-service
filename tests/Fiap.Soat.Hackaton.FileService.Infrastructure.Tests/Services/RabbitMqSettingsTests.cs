@@ -1,5 +1,5 @@
-using FluentAssertions;
 using Fiap.Soat.Hackaton.FileService.Infrastructure.Services;
+using FluentAssertions;
 
 namespace Fiap.Soat.Hackaton.FileService.Infrastructure.Tests.Services;
 

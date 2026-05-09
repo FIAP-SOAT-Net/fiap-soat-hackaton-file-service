@@ -1,5 +1,5 @@
-using FluentAssertions;
 using Fiap.Spat.Hackaton.FileService.Domain.Entities;
+using FluentAssertions;
 using MongoDB.Bson;
 
 namespace Fiap.Spat.Hackaton.FileService.Domain.Tests.Entities;

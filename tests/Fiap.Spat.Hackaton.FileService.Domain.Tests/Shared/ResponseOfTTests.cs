@@ -1,6 +1,6 @@
+using Fiap.Spat.Hackaton.FileService.Domain.Shared;
 using FluentAssertions;
 using FluentResults;
-using Fiap.Spat.Hackaton.FileService.Domain.Shared;
 using Moq;
 using System.Net;
 
