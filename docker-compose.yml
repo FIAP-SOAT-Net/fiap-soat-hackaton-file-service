@@ -66,7 +66,7 @@ services:
   api:
     build:
       context: .
-      dockerfile: src/Fiap.Soat.Hackaton.FileService.Api/Dockerfile
+      dockerfile: ./Dockerfile
     container_name: fiap-file-service-api
     restart: unless-stopped
     environment:
@@ -78,7 +78,7 @@ services:
       MongoDb__User: ${MONGODB_USER}
       MongoDb__Password: ${MONGODB_PASSWORD}
       MongoDb__Database: ${MONGODB_DATABASE}
-      ConnectionStrings__MongoDB: "mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@${MONGODB_HOST}:${MONGODB_PORT}/${MONGODB_DATABASE}?authSource=admin"
+      ConnectionStrings__MongoDB: "mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@mongodb:${MONGODB_PORT}/${MONGODB_DATABASE}?authSource=admin"
       # RabbitMQ Configuration
       RabbitMQ__Host: rabbitmq
       RabbitMQ__Port: ${RABBITMQ_PORT}
@@ -86,7 +86,7 @@ services:
       RabbitMQ__Password: ${RABBITMQ_PASSWORD}
       RabbitMQ__ExchangeName: ${RABBITMQ_EXCHANGE_NAME:-fileservice.events.exchange}
       RabbitMQ__QueueName: ${RABBITMQ_QUEUE_NAME:-fileservice.events}
-      ConnectionStrings__RabbitMQ: "amqp://${RABBITMQ_USER}:${RABBITMQ_PASSWORD}@$rabbitmq:${RABBITMQ_PORT}/"
+      ConnectionStrings__RabbitMQ: "amqp://${RABBITMQ_USER}:${RABBITMQ_PASSWORD}@rabbitmq:${RABBITMQ_PORT}/"
       # AWS S3 Configuration
       S3__ServiceUrl: http://localstack:4566
       S3__Region: ${S3_REGION}
