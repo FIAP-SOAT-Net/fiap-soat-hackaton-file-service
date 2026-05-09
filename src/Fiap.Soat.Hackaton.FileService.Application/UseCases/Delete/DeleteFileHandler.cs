@@ -1,7 +1,7 @@
 using Fiap.Soat.Hackaton.FileService.Application.Adapters.Gateways.Repositories;
 using Fiap.Soat.Hackaton.FileService.Application.Adapters.Gateways.Services;
-using Fiap.Soat.Hackaton.FileService.Application.UseCases.Interfaces;
 using Fiap.Soat.Hackaton.FileService.Application.UseCases.Delete;
+using Fiap.Soat.Hackaton.FileService.Application.UseCases.Interfaces;
 using Fiap.Soat.Hackaton.FileService.Domain.Shared;
 using Microsoft.Extensions.Logging;
 

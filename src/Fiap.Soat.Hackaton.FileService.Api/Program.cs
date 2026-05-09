@@ -1,8 +1,6 @@
 using Amazon.Runtime;
 using Amazon.S3;
 using Fiap.Soat.Hackaton.FileService.Api.Endpoints;
-using Fiap.Soat.Hackaton.FileService.Infrastructure.Repositories;
-using Fiap.Soat.Hackaton.FileService.Infrastructure.Services;
 using Fiap.Soat.Hackaton.FileService.Application.Adapters.Controllers;
 using Fiap.Soat.Hackaton.FileService.Application.Adapters.Controllers.Interfaces;
 using Fiap.Soat.Hackaton.FileService.Application.Adapters.Gateways.Repositories;
@@ -12,6 +10,8 @@ using Fiap.Soat.Hackaton.FileService.Application.UseCases.Get;
 using Fiap.Soat.Hackaton.FileService.Application.UseCases.Interfaces;
 using Fiap.Soat.Hackaton.FileService.Application.UseCases.List;
 using Fiap.Soat.Hackaton.FileService.Application.UseCases.Upload;
+using Fiap.Soat.Hackaton.FileService.Infrastructure.Repositories;
+using Fiap.Soat.Hackaton.FileService.Infrastructure.Services;
 using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,5 +1,5 @@
-using Fiap.Soat.Hackaton.FileService.Infrastructure.Repositories;
 using Fiap.Soat.Hackaton.FileService.Domain.Entities;
+using Fiap.Soat.Hackaton.FileService.Infrastructure.Repositories;
 using FluentAssertions;
 using MongoDB.Bson;
 using MongoDB.Driver;
