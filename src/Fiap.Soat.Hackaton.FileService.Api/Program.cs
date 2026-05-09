@@ -69,3 +69,7 @@ _ = app.MapHealthChecks("/healthcheck");
 FileEndpoints.Map(app);
 
 await app.RunAsync();
+
+public partial class Program
+{
+}
