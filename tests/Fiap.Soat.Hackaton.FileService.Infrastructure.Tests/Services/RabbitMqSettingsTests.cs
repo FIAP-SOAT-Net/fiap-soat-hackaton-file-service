@@ -16,7 +16,7 @@ public class RabbitMqSettingsTests
         // Assert
         settings.Host.Should().Be("localhost");
         settings.Port.Should().Be(5672);
-        settings.UserName.Should().Be("guest");
+        settings.User.Should().Be("guest");
         settings.Password.Should().Be("guest");
         settings.ExchangeName.Should().Be("fileservice.events.exchange");
         settings.QueueName.Should().Be("fileservice.events");
@@ -31,7 +31,7 @@ public class RabbitMqSettingsTests
         // Act
         settings.Host = "rabbit-host";
         settings.Port = 5673;
-        settings.UserName = "user";
+        settings.User = "user";
         settings.Password = "pass";
         settings.ExchangeName = "exchange";
         settings.QueueName = "queue";
@@ -39,7 +39,7 @@ public class RabbitMqSettingsTests
         // Assert
         settings.Host.Should().Be("rabbit-host");
         settings.Port.Should().Be(5673);
-        settings.UserName.Should().Be("user");
+        settings.User.Should().Be("user");
         settings.Password.Should().Be("pass");
         settings.ExchangeName.Should().Be("exchange");
         settings.QueueName.Should().Be("queue");

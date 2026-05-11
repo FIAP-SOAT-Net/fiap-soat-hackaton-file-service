@@ -21,7 +21,7 @@ public sealed class RabbitMqPublisher : IMessagePublisher, IDisposable
         {
             HostName = _settings.Host,
             Port = _settings.Port,
-            UserName = _settings.UserName,
+            UserName = _settings.User,
             Password = _settings.Password,
             DispatchConsumersAsync = true
         };

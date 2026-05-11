@@ -80,12 +80,12 @@ services:
       MongoDb__Database: ${MONGODB_DATABASE}
       ConnectionStrings__MongoDB: "mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@mongodb:${MONGODB_PORT}/${MONGODB_DATABASE}?authSource=admin"
       # RabbitMQ Configuration
-      RabbitMQ__Host: rabbitmq
-      RabbitMQ__Port: ${RABBITMQ_PORT}
-      RabbitMQ__User: ${RABBITMQ_USER}
-      RabbitMQ__Password: ${RABBITMQ_PASSWORD}
-      RabbitMQ__ExchangeName: ${RABBITMQ_EXCHANGE_NAME:-fileservice.events.exchange}
-      RabbitMQ__QueueName: ${RABBITMQ_QUEUE_NAME:-fileservice.events}
+      RabbitMq__Host: rabbitmq
+      RabbitMq__Port: ${RABBITMQ_PORT}
+      RabbitMq__User: ${RABBITMQ_USER}
+      RabbitMq__Password: ${RABBITMQ_PASSWORD}
+      RabbitMq__ExchangeName: ${RABBITMQ_EXCHANGE_NAME:-fileservice.events.exchange}
+      RabbitMq__QueueName: ${RABBITMQ_QUEUE_NAME:-fileservice.events}
       ConnectionStrings__RabbitMQ: "amqp://${RABBITMQ_USER}:${RABBITMQ_PASSWORD}@rabbitmq:${RABBITMQ_PORT}/"
       # AWS S3 Configuration
       S3__ServiceUrl: http://localstack:4566
